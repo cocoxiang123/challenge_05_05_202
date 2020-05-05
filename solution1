@@ -1,0 +1,27 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var firstUniqChar = function(s) {
+ var sArr = [...s];
+        var index = -1;
+
+        for (var i = 0; i < sArr.length; i++) {
+
+            var duplicate = false;
+            for (var j = 0; j < sArr.length; j++) {
+                if (i != j) {
+                    if (sArr[i] == sArr[j]) {
+                        duplicate = true;
+                        break;
+                    }
+                }
+            }
+            if (duplicate == false) {
+                index = i;
+                break;
+            }
+
+        }
+        return index;
+};
