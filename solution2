@@ -1,0 +1,24 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var firstUniqChar = function(s) {
+   
+              var Ar = [];
+        var Char = 0;
+        var output = -1;
+        for (var i = 0; i < s.length; i++) {
+                for (var j = 0; j < s.length; j++) {
+                    if (s[i] == s[j] && i != j) {
+                        j = s.length;
+
+                    }
+                    else if (j == s.length - 1) { output = i; i = s.length; }
+                }
+
+        }
+        return output;
+
+
+
+};
